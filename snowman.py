@@ -1,3 +1,5 @@
+# snowman.py
+
 import random
 from ascii_art import STAGES
 

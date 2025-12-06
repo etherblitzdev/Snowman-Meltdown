@@ -12,12 +12,11 @@ The goal: guess the secret word before the snowman disappears!
 Snowman-Meltdown/
 ```bash
 tree .
-
-├── ascii_art.py
-├── game_logic.py
-├── main.py
-├── snowman.py
-└── test_game_logic.py
+├── ascii_art.py        # Snowman melting stages
+├── game_logic.py       # Core gameplay loop, input validation, replay logic
+├── main.py             # Entry point that calls game_logic.main()
+├── snowman.py          # (legacy stub, can be removed or kept for reference)
+├── test_game_logic.py  # Pytest unit tests
 └── README.md # Project documentation
 
 2 directories, 6 files
@@ -49,7 +48,7 @@ pip install pytest
 
 ### 4. 🎮 Play the Game - Run the entry point:
 ```bash
-python3 snowman.py
+python3 main.py
 ```
 
 ### 5. 🧪 Running Tests - Unit tests are included for core functions.
