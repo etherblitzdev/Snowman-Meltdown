@@ -41,17 +41,42 @@ python -m venv snowman-env
 snowman-env\Scripts\activate      # Windows
 ```
 
-### 3. Install dependencies
+### 3. Freeze the environment
+Use pip freeze to list all installed packages with their versions:
+
 ```bash
-pip install pytest
+pip freeze > requirements.txt
 ```
 
-### 4. 🎮 Play the Game - Run the entry point:
+### 4. Check the file:
+Open requirements.txt
+```bash
+astroid==4.0.2
+black==25.11.0
+click==8.3.1
+dill==0.4.0
+iniconfig==2.3.0
+isort==7.0.0
+mccabe==0.7.0
+mypy_extensions==1.1.0
+packaging==25.0
+pathspec==0.12.1
+platformdirs==4.5.1
+pluggy==1.6.0
+Pygments==2.19.2
+pylint==4.0.4
+pytest==9.0.1
+pytokens==0.3.0
+ruff==0.14.8
+tomlkit==0.13.3
+```
+
+### 5. 🎮 Play the Game - Run the entry point:
 ```bash
 python3 main.py
 ```
 
-### 5. 🧪 Running Tests - Unit tests are included for core functions.
+### 6. 🧪 Running Tests - Unit tests are included for core functions.
 ```bash
 pytest -v
 ```
