@@ -2,18 +2,23 @@
 import random
 from ascii_art import STAGES
 
+
 def get_random_word():
     words = ["program", "snowman", "python", "meltdown", "winter"]
     return random.choice(words)
+
 
 def display_game_state(mistakes, secret_word, guessed_letters):
     print("\n==============================")
     print(STAGES[mistakes])
     print("------------------------------")
-    display_word = " ".join([letter if letter in guessed_letters else "_" for letter in secret_word])
+    display_word = " ".join(
+        [letter if letter in guessed_letters else "_" for letter in secret_word]
+    )
     print("Word:", display_word)
     print("Guessed letters:", " ".join(sorted(guessed_letters)))
     print("==============================\n")
+
 
 def get_valid_guess(guessed_letters):
     while True:
@@ -26,6 +31,7 @@ def get_valid_guess(guessed_letters):
             continue
         return guess
 
+
 def play_game():
     secret_word = get_random_word()
     guessed_letters = []
@@ -34,7 +40,9 @@ def play_game():
 
     print("❄️ Welcome to Snowman Meltdown!")
 
-    while mistakes < max_mistakes and not all(letter in guessed_letters for letter in secret_word):
+    while mistakes < max_mistakes and not all(
+        letter in guessed_letters for letter in secret_word
+    ):
         display_game_state(mistakes, secret_word, guessed_letters)
         guess = get_valid_guess(guessed_letters)
         guessed_letters.append(guess)
@@ -51,6 +59,7 @@ def play_game():
         print("🎉 You saved the snowman!\n")
     else:
         print(f"💀 The snowman melted... The word was: {secret_word}\n")
+
 
 def main():
     while True:
