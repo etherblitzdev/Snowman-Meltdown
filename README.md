@@ -1,5 +1,4 @@
-# create a single copy field for the entire README.md markdown
-# include all below
+
 # ❄️ Snowman Meltdown
 
 Snowman Meltdown is a Python command‑line word guessing game inspired by Hangman.  
