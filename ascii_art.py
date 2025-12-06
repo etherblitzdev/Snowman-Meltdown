@@ -9,22 +9,33 @@ STAGES = [
      ( : ) 
      ( : ) 
      """,
-    # Stage 1: Bottom part starts melting
+    # Stage 1
     """
       ___  
      /___\\ 
      (o o) 
      ( : ) 
      """,
-    # Stage 2: Only the head remains
+    # Stage 2
     """
       ___  
      /___\\ 
      (o o) 
      """,
-    # Stage 3: Snowman completely melted
+    # Stage 3
     """
       ___  
      /___\\ 
+     (o o) 
+     """,
+    # Stage 4
+    """
+      ___  
+     /___\\ 
+     """,
+    # Stage 5: Completely melted
+    """
+
+     (melted...)
      """
 ]
